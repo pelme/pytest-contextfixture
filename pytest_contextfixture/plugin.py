@@ -22,7 +22,6 @@ def _make_fixture(fn, fixture_args, fixture_kwargs):
 
 def pytest_namespace():
     def contextfixture(*args, **kwargs):
-
         if args and callable(args[0]):
             # @pytest.contextfixture
             # def foo(request): ...
