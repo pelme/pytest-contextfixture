@@ -4,8 +4,7 @@ from contextlib import contextmanager
 
 # Keep track on what has been teared down
 class TeardownStates(object):
-    outer_teardowned = False
-    inner_teardowned = False
+    pass
 
 s = TeardownStates()
 
@@ -22,7 +21,7 @@ def outer():
 
 @contextmanager
 def inner():
-    s.b_teardowned = False
+    s.inner_teardowned = False
     yield
     print 'tearing down inner'
     assert not s.outer_teardowned
