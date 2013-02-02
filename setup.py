@@ -12,24 +12,22 @@ from setuptools import setup
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-
 setup(
     name='pytest-contextfixture',
-    version='0.1',
     description='Define pytest fixtures as context managers.',
+    long_description=read("README.rst"),
+    version='0.1',
     author='Andreas Pelme',
     author_email='andreas@pelme.se',
-    maintainer="Andreas Pelme",
-    maintainer_email="andreas@pelme.se",
     url='http://github.com/pelme/pytest-contextfixture/',
-    packages=['pytest_contextfixture'],
-    long_description=read('README.rst'),
+    py_modules=['pytest_contextfixture'],
+    entry_points={'pytest11': ['contextfixtureprovider = pytest_contextfixture']},
     install_requires=['pytest>=2.3.4'],
-    classifiers=['Development Status :: 4 - Beta',
-                 'Intended Audience :: Developers',
-                 'License :: OSI Approved :: BSD License',
-                 'Operating System :: OS Independent',
-                 'Programming Language :: Python',
-                 'Topic :: Software Development :: Testing'],
-    # the following makes a plugin available to py.test
-    entry_points={'pytest11': ['contextfixture = pytest_contextfixture.plugin']})
+    classifiers=[
+        'Development Status :: 4 - Beta',
+         'Intended Audience :: Developers',
+         'License :: OSI Approved :: BSD License',
+         'Operating System :: OS Independent',
+         'Programming Language :: Python',
+         'Topic :: Software Development :: Testing'],
+)
