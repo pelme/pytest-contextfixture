@@ -16,7 +16,7 @@ setup(
     name='pytest-contextfixture',
     description='Define pytest fixtures as context managers.',
     long_description=read("README.rst"),
-    version='0.1',
+    version='0.1.1',
     author='Andreas Pelme',
     author_email='andreas@pelme.se',
     url='http://github.com/pelme/pytest-contextfixture/',
