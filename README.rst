@@ -1,3 +1,6 @@
+This repository is no longer maintained, please see the yield_fixture functionality in pytest: http://pytest.org/latest/yieldfixture.html
+~~~~
+
 pytest-contextfixture makes it possible to define pytest fixtures as context managers.
 
 A contextfixture works like a standard fixture, but it allows the
